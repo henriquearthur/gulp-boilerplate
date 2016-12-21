@@ -35,7 +35,7 @@
     .pipe(replace("url('fancybox_sprite@2x.png')", "url('../images/fancybox_sprite@2x.png')"))
     .pipe(replace("url('fancybox_loading@2x.gif')", "url('../images/fancybox_loading@2x.gif')"))
     .pipe(replace("themes/default/assets/", "../../semantic/dist/themes/default/assets/"))
-    .pipe(chmod(644))
+    .pipe(chmod(0o755))
     .pipe(gulpif(dotenv.ENVIRONMENT == 'production', cssnano({removeAllButFirst: true, zindex: false})))
     .pipe(gulp.dest(paths.dist.css))
     .pipe(gulpif(dotenv.ENVIRONMENT == 'development', browserSync.stream()));

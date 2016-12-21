@@ -23,7 +23,7 @@
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed(paths.dist.images))
     .pipe(gulpif(dotenv.ENVIRONMENT == 'production', imagemin({progressive: true, svgoPlugins: [{removeViewBox: false}], use: [pngquant()] })))
-    .pipe(chmod(644))
+    .pipe(chmod(0o755))
     .pipe(gulp.dest(paths.dist.images))
     .pipe(gulpif(dotenv.ENVIRONMENT == 'development', browserSync.stream()));
  });

@@ -26,7 +26,7 @@
     return gulp.src(files)
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(filterFonts)
-    .pipe(chmod(644))
+    .pipe(chmod(0o755))
     .pipe(gulp.dest(paths.dist.fonts))
     .pipe(gulpif(dotenv.ENVIRONMENT == 'development', browserSync.stream()));
 });

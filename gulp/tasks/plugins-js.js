@@ -31,7 +31,7 @@
     .pipe(filterJS)
     .pipe(order(['jquery.js', '*']))
     .pipe(concat('vendor.js'))
-    .pipe(chmod(644))
+    .pipe(chmod(0o755))
     .pipe(gulpif(dotenv.ENVIRONMENT == 'production', uglify({ preserveComments: 'some' }).on('error', util.log)))
     .pipe(gulp.dest(paths.dist.scripts))
     .pipe(gulpif(dotenv.ENVIRONMENT == 'development', browserSync.stream()));
