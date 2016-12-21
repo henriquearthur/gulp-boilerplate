@@ -1,0 +1,19 @@
+{
+  "name": "__projectname__",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Henrique Arthur <eu@henriquearthur.me>"
+  ],
+  "homepage": "",
+  "private": true,
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}
