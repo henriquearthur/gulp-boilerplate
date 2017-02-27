@@ -13,6 +13,8 @@ var spritesmith = require('gulp.spritesmith');
 var buffer      = require('vinyl-buffer');
 var merge       = require('merge-stream');
 var imagemin    = require('gulp-imagemin');
+var gulpif      = require('gulp-if');
+var dotenv      = require('dotenv').config();
 
 gulp.task('build:sprites', function(cb) {
     var spriteData = gulp.src(paths.src.sprites).pipe(spritesmith({
