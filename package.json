@@ -28,13 +28,15 @@
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.11",
+    "gulp.spritesmith": "^6.3.0",
     "imagemin-pngquant": "^5.0.0",
     "main-bower-files": "^2.13.1",
+    "merge-stream": "^1.0.1",
     "node-notifier": "^4.6.1",
     "path": "^0.12.7",
     "require-dir": "^0.3.1",
     "run-sequence": "^1.2.2",
-    "sprity": "^1.0.8"
+    "vinyl-buffer": "^1.0.0"
   },
   "dependencies": {}
 }

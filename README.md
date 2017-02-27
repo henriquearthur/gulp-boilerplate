@@ -23,7 +23,7 @@ The `appView` array is the path of your HTML, PHP, etc files that contains your 
 
 
 ### How to generate Sprites
-You need to create a structure inside `src/sprites` (or your custom path for sprites folder) containing the images you want to be generated into sprite images.
+The images inside `src/sprites` (or your custom path for sprites folder) will be transformed into a `sprite.png` image on `assets/images` (or your custom path for dist-images folder). You can also use a structure like the one above to organize your images, it won't affect the task.
 
 Example:
 
@@ -37,6 +37,6 @@ Example:
 
 The example above will generate two sprite images: `albums.png` and `icons.png`  on `public/assets/images` folder (or the folder you provided on `config.js` for `dist.images`).
 
-Will also generate a `_sprites.css` file on `src/scss/_sprites.css` which I recommend you to include on your SASS/SCSS files using
+Will also generate a `_sprite.css` file on `src/scss/_sprite.css` which I recommend you to include on your SASS/SCSS files using
 
-    @import "_sprites"
+    @import "_sprite"

@@ -11,5 +11,5 @@ var gulp = require('gulp');
 var del  = require('del');
 
 gulp.task('clean', function() {
-    return del([paths.dist.fonts, paths.dist.images, paths.dist.scripts, paths.dist.css, paths.srcFolder.scss + '/_sprites.css']);
+    return del([paths.dist.fonts, paths.dist.images, paths.dist.scripts, paths.dist.css, paths.srcFolder.scss + '/_sprite.scss']);
 });
