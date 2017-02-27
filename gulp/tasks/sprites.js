@@ -31,5 +31,5 @@ gulp.task('build:sprites', function(cb) {
     .pipe(gulp.dest(paths.srcFolder.scss))
     .pipe(gulpif(dotenv.ENVIRONMENT == 'development', browserSync.stream()));
 
-    return merge(imgStream, cssStream, browserSyncStream);
+    return merge(imgStream, cssStream);
 });
