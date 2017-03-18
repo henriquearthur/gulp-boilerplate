@@ -13,8 +13,8 @@ var paths = {
         fonts: 'src/fonts/**/*.{eot,ttf,woff,woff2}',
         images: 'src/images/**/*.{png,jpg,jpeg,gif,bmp}',
         scripts: 'src/js/**/*.js',
-        pluginsCSS: ['src/plugins-css/**/*.css', 'semantic/dist/semantic.css'],
-        pluginsJS: ['src/plugins-js/**/*.js', 'semantic/dist/semantic.js'],
+        pluginsCSS: ['src/plugins-css/**/*.css', 'public/semantic/dist/semantic.css'],
+        pluginsJS: ['src/plugins-js/**/*.js', 'public/semantic/dist/semantic.js'],
         pluginsIMG: 'src/plugins-images/**/*.{png,jpg,jpeg,gif,bmp}',
         scss: 'src/scss/**/*.scss',
         sprites: 'src/sprites/**/*.png'
@@ -35,7 +35,7 @@ var paths = {
         scripts: 'public/assets/js',
         css: 'public/assets/css'
     },
-    appView: [ 'app/template/**/*.{php,html,phtml}' ]
+    appView: [ 'app/template/**/*.{php,html,phtml,twig}' ]
 };
 
 /**
@@ -45,10 +45,8 @@ var bowerOverrides = {
     overrides: {
         'fancybox': {
             main: [
-            'source/jquery.fancybox.js',
-            'source/jquery.fancybox.css',
-            'source/*.png',
-            'source/*.gif'
+            'dist/jquery.fancybox.js',
+            'dist/jquery.fancybox.css'
             ]
         },
         'tipsy': {
