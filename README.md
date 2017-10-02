@@ -1,5 +1,5 @@
 # gulp-boilerplate
-A gulp boilerplate that I use on my web projects
+A gulp boilerplate built for use in web development
 
 ### Installation
 
