@@ -5,7 +5,7 @@ A gulp boilerplate built for use in web development
 
 ```sh
 $ git clone https://github.com/henriquearthur/gulp-boilerplate.git
-$ npm install
+$ yarn install
 $ gulp
 ```
 
