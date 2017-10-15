@@ -1,5 +1,5 @@
 /**
- * CooeeTube - by Henrique Arthur <eu@henriquearthur.me>
+ * CooeeTube - by Henrique Arthur <eu@henriquearthur.com.br>
  *
  * Concatenate files starting with '_';
  * Minify if in production;

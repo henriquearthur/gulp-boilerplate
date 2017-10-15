@@ -1,5 +1,5 @@
 /**
- * CMS - by Henrique Arthur <eu@henriquearthur.me>
+ * CMS - by Henrique Arthur <eu@henriquearthur.com.br>
  *
  * Default task - Run other tasks in the correct sequence
  *

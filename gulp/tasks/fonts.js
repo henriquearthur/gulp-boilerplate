@@ -1,5 +1,5 @@
 /**
- * CMS - by Henrique Arthur <eu@henriquearthur.me>
+ * CMS - by Henrique Arthur <eu@henriquearthur.com.br>
  *
  * Copy Bower plugins fonts and fonts from fonts folder to assets
  *

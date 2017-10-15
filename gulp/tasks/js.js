@@ -1,5 +1,5 @@
 /**
- * CooeeTube - by Henrique Arthur <eu@henriquearthur.me>
+ * CooeeTube - by Henrique Arthur <eu@henriquearthur.com.br>
  *
  * Minify if in production;
  * Copy JS files to assets folder

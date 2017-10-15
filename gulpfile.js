@@ -1,5 +1,5 @@
 /**
- * __projectname__ - by Henrique Arthur <eu@henriquearthur.me>
+ * __projectname__ - by Henrique Arthur <eu@henriquearthur.com.br>
  */
 
 var requireDir = require('require-dir');

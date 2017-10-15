@@ -1,5 +1,5 @@
 /**
- * CMS - by Henrique Arthur <eu@henriquearthur.me>
+ * CMS - by Henrique Arthur <eu@henriquearthur.com.br>
  *
  * Compile (and minify if in production) all SCSS files
  *

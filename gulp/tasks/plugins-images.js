@@ -1,5 +1,5 @@
 /**
- * CMS - by Henrique Arthur <eu@henriquearthur.me>
+ * CMS - by Henrique Arthur <eu@henriquearthur.com.br>
  *
  * Compress all images from Bower plugins and plugins-images folder
  *
