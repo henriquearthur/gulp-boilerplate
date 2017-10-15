@@ -1,5 +1,5 @@
 /**
- * CooeeTube - by Henrique Arthur <eu@henriquearthur.com.br>
+ * __projectname__ - by Henrique Arthur <eu@henriquearthur.com.br>
  *
  * Concat (and minify if in production) all CSS Plugins (bower and plugins-css folder)
  *

@@ -1,5 +1,5 @@
 /**
- * CooeeTube - by Henrique Arthur <eu@henriquearthur.com.br>
+ * __projectname__ - by Henrique Arthur <eu@henriquearthur.com.br>
  *
  * Concat (and minify if in production) all JS Plugins (bower and plugins-js folder)
  *

@@ -13,7 +13,7 @@ gulp.task('default', function(callback) {
         'clean',
         'browserSync',
         ['build:sprites', 'build:images'],
-        ['build:pluginsCSS', 'build:pluginsJS', 'build:pluginsIMG', 'build:scss', 'build:es6', 'build:js', 'build:fonts'],
+        ['build:pluginsCSS', 'build:pluginsJS', 'build:pluginsIMG', 'build:scss', 'build:js-concat', 'build:js-each', 'build:fonts'],
         'watch',
         callback
         );

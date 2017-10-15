@@ -21,13 +21,10 @@ Set the paths for your source assets (SCSS, Images, JS, etc), generated assets (
 
 The `appView` array is the path of your HTML, PHP, etc files that contains your front-end code. It will be passed to BrowserSync so you can use Live Reload. Files that are on the directories defined on `appView` will be live reloaded when modified.
 
-### Babel (ES6) support and Browserify
-You can put your ES6 (or other [Babel](https://babeljs.io) preset) code on the `src/js/app.js` (or your custom path for `src.scriptsES6`) and it will be compiled to `public/assets/bundle.js` (or your custom path for `dist.scripts` - but the filename remains `bundle.js`, if you want to change that, you'll need to edit the `build:es6` task [`gulp/tasks/es6.js`]).
+### JavaScript workflow
+All the files starting with `_` on your JS src folder will be minified (if production) and concatened into a single `vendor.js` file on your JS dist folder.
 
-
-[Browserify](http://browserify.org) is supported as well, which means you can `require` your modules on your ES6 code.
-
-You can use plain JavaScript as well. Any files on `src/js` folder (or your custom path) will be minified (if in production) and copied to `public/assets` folder. **Except `app.js`, which is reserved for ES6/Babel**.
+Files that do not start with `_` will be minified (if production) and copied to your JS dist folder.
 
 ### How to generate Sprites
 The images inside `src/sprites` (or your custom path for sprites folder) will be transformed into a `sprite.png` image on `assets/images` (or your custom path for `dist.images` folder). You can also use a structure like the one above to organize your images, it won't affect the task.
