@@ -1,5 +1,5 @@
 /**
- * __projectname__ - by Henrique Arthur <eu@henriquearthur.me>
+ * CMS - by Henrique Arthur <eu@henriquearthur.me>
  *
  * Watch for changes
  *
@@ -17,8 +17,12 @@
 
  gulp.task('watch', function(cb) {
     if(dotenv.ENVIRONMENT == 'development') {
-        watch(paths.src.scripts, function() {
-            gulp.start('build:js');
+        watch(paths.src.scriptsEach, function() {
+            gulp.start('build:js-each');
+        });
+
+        watch(paths.src.scriptsConcat, function() {
+            gulp.start('build:js-concat');
         });
 
         watch(paths.src.scss, function() {

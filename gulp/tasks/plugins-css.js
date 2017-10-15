@@ -1,5 +1,5 @@
 /**
- * __projectname__ - by Henrique Arthur <eu@henriquearthur.me>
+ * CooeeTube - by Henrique Arthur <eu@henriquearthur.me>
  *
  * Concat (and minify if in production) all CSS Plugins (bower and plugins-css folder)
  *
@@ -20,6 +20,7 @@
  var dotenv         = require('dotenv').config();
  var plumber        = require('gulp-plumber');
  var notify         = require("gulp-notify");
+ var sourcemaps     = require('gulp-sourcemaps');
 
  gulp.task('build:pluginsCSS', function() {
     var filterCSS = filter('**/*.css');
@@ -27,6 +28,7 @@
     return gulp.src(mainBowerFiles(bowerOverrides).concat(paths.src.pluginsCSS))
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(filterCSS)
+    .pipe(sourcemaps.init())
     .pipe(concat('vendor.css'))
     .pipe(replace("url('blank.gif')", "url('../images/blank.gif')"))
     .pipe(replace("url('fancybox_sprite.png')", "url('../images/fancybox_sprite.png')"))
@@ -37,6 +39,7 @@
     .pipe(replace("themes/default/assets/", "../../semantic/dist/themes/default/assets/"))
     .pipe(chmod(0o755))
     .pipe(gulpif(dotenv.ENVIRONMENT == 'production', cssnano({removeAllButFirst: true, zindex: false})))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.dist.css))
     .pipe(gulpif(dotenv.ENVIRONMENT == 'development', browserSync.stream()));
 });

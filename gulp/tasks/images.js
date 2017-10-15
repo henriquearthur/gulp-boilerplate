@@ -1,5 +1,5 @@
 /**
- * __projectname__ - by Henrique Arthur <eu@henriquearthur.me>
+ * CMS - by Henrique Arthur <eu@henriquearthur.me>
  *
  * Compress images
  *

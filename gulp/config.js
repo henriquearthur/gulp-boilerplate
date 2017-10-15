@@ -1,5 +1,5 @@
 /**
- * __projectname__ - by Henrique Arthur <eu@henriquearthur.me>
+ * CMS - by Henrique Arthur <eu@henriquearthur.me>
  *
  * Settings that will be used on gulp tasks
  *
@@ -8,11 +8,13 @@
 /**
  * Paths for source files and generated assets
  */
-var paths = {
+ var paths = {
     src: {
-        fonts: 'src/fonts/**/*.{eot,ttf,woff,woff2}',
+        fonts: 'src/fonts/**/*.{otf,eot,ttf,woff,woff2}',
         images: 'src/images/**/*.{png,jpg,jpeg,gif,bmp}',
         scripts: 'src/js/**/*.js',
+        scriptsEach: 'src/js/**/[^_]*.js',
+        scriptsConcat: 'src/js/**/_*.js',
         pluginsCSS: ['src/plugins-css/**/*.css', 'public/semantic/dist/semantic.css'],
         pluginsJS: ['src/plugins-js/**/*.js', 'public/semantic/dist/semantic.js'],
         pluginsIMG: 'src/plugins-images/**/*.{png,jpg,jpeg,gif,bmp}',
@@ -35,13 +37,13 @@ var paths = {
         scripts: 'public/assets/js',
         css: 'public/assets/css'
     },
-    appView: [ 'app/template/**/*.{php,html,phtml,twig}' ]
+    appView: [ 'app/templates/**/*.{php,html,phtml,twig}' ]
 };
 
 /**
  * Overrides for the 'main' entry on 'bower.json' files of plugins commonly used (by me)
  */
-var bowerOverrides = {
+ var bowerOverrides = {
     overrides: {
         'fancybox': {
             main: [
@@ -113,9 +115,38 @@ var bowerOverrides = {
             'nivo-slider.css',
             'jquery.nivo.slider.js'
             ]
-        }
+        },
+        'jquery-ui': {
+            main: [
+            'jquery-ui.js',
+            'themes/base/jquery-ui.css'
+            ]
+        },
+        'bootstrap': {
+            main: [
+            'dist/css/bootstrap.css',
+            'dist/js/bootstrap.js'
+            ]
+        },
+        'jvectormap': {
+            main: [
+            'jquery-jvectormap.css',
+            'jquery-jvectormap.js'
+            ]
+        },
+        'select2': {
+            main: [
+            'dist/css/select2.css',
+            'dist/js/select2.js'
+            ]
+        },
+        'inputmask': {
+            main: [
+            'dist/jquery.inputmask.bundle.js'
+            ]
+        },
     }
- };
+};
 
 module.exports = {
     paths: paths,

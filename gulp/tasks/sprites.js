@@ -1,5 +1,5 @@
 /**
- * __projectname__ - by Henrique Arthur <eu@henriquearthur.me>
+ * CMS - by Henrique Arthur <eu@henriquearthur.me>
  *
  * Generate Sprites from sprites folder
  *
@@ -18,7 +18,7 @@ var dotenv      = require('dotenv').config();
 
 gulp.task('build:sprites', function(cb) {
     var spriteData = gulp.src(paths.src.sprites).pipe(spritesmith({
-        imgName: 'sprite.png',
+        imgName: '../images/sprite.png',
         cssName: '_sprite.scss'
     }));
 

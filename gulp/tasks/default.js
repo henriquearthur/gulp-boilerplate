@@ -1,5 +1,5 @@
 /**
- * __projectname__ - by Henrique Arthur <eu@henriquearthur.me>
+ * CMS - by Henrique Arthur <eu@henriquearthur.me>
  *
  * Default task - Run other tasks in the correct sequence
  *
@@ -13,7 +13,7 @@ gulp.task('default', function(callback) {
         'clean',
         'browserSync',
         ['build:sprites', 'build:images'],
-        ['build:pluginsCSS', 'build:pluginsJS', 'build:pluginsIMG', 'build:scss', 'build:js', 'build:fonts'],
+        ['build:pluginsCSS', 'build:pluginsJS', 'build:pluginsIMG', 'build:scss', 'build:js-concat', 'build:js-each', 'build:fonts'],
         'watch',
         callback
         );

@@ -1,5 +1,5 @@
 /**
- * __projectname__ - by Henrique Arthur <eu@henriquearthur.me>
+ * CooeeTube - by Henrique Arthur <eu@henriquearthur.me>
  *
  * Concat (and minify if in production) all JS Plugins (bower and plugins-js folder)
  *
@@ -22,6 +22,7 @@
  var dotenv         = require('dotenv').config();
  var plumber        = require('gulp-plumber');
  var notify         = require("gulp-notify");
+ var sourcemaps     = require('gulp-sourcemaps');
 
  gulp.task('build:pluginsJS', function() {
     var filterJS = filter('**/*.js');
@@ -29,10 +30,12 @@
     return gulp.src(mainBowerFiles(bowerOverrides).concat(paths.src.pluginsJS))
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(filterJS)
-    .pipe(order(['jquery.js', '*']))
+    .pipe(sourcemaps.init())
+    .pipe(order(['jquery.js', 'jquery.dataTables.js', 'moment.js', '*']))
     .pipe(concat('vendor.js'))
     .pipe(chmod(0o755))
     .pipe(gulpif(dotenv.ENVIRONMENT == 'production', uglify({ preserveComments: 'some' }).on('error', util.log)))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.dist.scripts))
     .pipe(gulpif(dotenv.ENVIRONMENT == 'development', browserSync.stream()));
  });
