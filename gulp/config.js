@@ -12,9 +12,8 @@
     src: {
         fonts: 'src/fonts/**/*.{otf,eot,ttf,woff,woff2}',
         images: 'src/images/**/*.{png,jpg,jpeg,gif,bmp}',
-        scripts: 'src/js/**/*.js',
-        scriptsEach: 'src/js/**/[^_]*.js',
-        scriptsConcat: 'src/js/**/_*.js',
+        scripts: ['src/js/**/*.js', '!src/js/app.js'],
+        scriptsES6: 'src/js/bundle.js',
         pluginsCSS: ['src/plugins-css/**/*.css', 'public/semantic/dist/semantic.css'],
         pluginsJS: ['src/plugins-js/**/*.js', 'public/semantic/dist/semantic.js'],
         pluginsIMG: 'src/plugins-images/**/*.{png,jpg,jpeg,gif,bmp}',

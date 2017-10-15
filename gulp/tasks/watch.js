@@ -17,12 +17,12 @@
 
  gulp.task('watch', function(cb) {
     if(dotenv.ENVIRONMENT == 'development') {
-        watch(paths.src.scriptsEach, function() {
-            gulp.start('build:js-each');
+        watch(paths.src.scriptsES6, function() {
+            gulp.start('build:es6');
         });
 
-        watch(paths.src.scriptsConcat, function() {
-            gulp.start('build:js-concat');
+        watch(paths.src.scripts, function() {
+            gulp.start('build:js');
         });
 
         watch(paths.src.scss, function() {

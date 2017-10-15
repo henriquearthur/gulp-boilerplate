@@ -1,9 +1,8 @@
 /**
  * CooeeTube - by Henrique Arthur <eu@henriquearthur.me>
  *
- * Concatenate files starting with '_';
  * Minify if in production;
- * Copy JS files to assets folder;
+ * Copy JS files to assets folder
  *
  */
 
@@ -12,7 +11,6 @@
 
  var gulp       = require('gulp');
  var changed    = require('gulp-changed');
- var concat     = require('gulp-concat');
  var chmod      = require('gulp-chmod');
  var uglify     = require('gulp-uglify');
  var util       = require('gulp-util');
@@ -22,12 +20,11 @@
  var notify     = require("gulp-notify");
  var sourcemaps = require('gulp-sourcemaps');
 
- gulp.task('build:js-concat', function() {
-    return gulp.src(paths.src.scriptsConcat)
+ gulp.task('build:js', function() {
+    return gulp.src(paths.src.scripts)
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed(paths.dist.scripts))
     .pipe(sourcemaps.init())
-    .pipe(concat('app.js'))
     .pipe(chmod(0o755))
     .pipe(gulpif(dotenv.ENVIRONMENT == 'production', uglify({ preserveComments: 'some' }).on('error', util.log)))
     .pipe(sourcemaps.write('./'))
