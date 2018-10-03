@@ -2,7 +2,6 @@
  * CMS - by Henrique Arthur <eu@henriquearthur.com.br>
  *
  * Settings that will be used on gulp tasks
- *
  */
 
 /**
